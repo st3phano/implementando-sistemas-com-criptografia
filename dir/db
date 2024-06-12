@@ -1,0 +1,7 @@
+<?php
+$endereco = "localhost:3306";
+$usuario = "php";
+$senha = `php $dir/dbs`;
+$db = "doar_para_nutrir";
+
+$conexao = mysqli_connect($endereco, $usuario, $senha, $db);

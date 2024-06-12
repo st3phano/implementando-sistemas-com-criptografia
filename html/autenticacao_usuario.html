@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../img/logomarca.png">
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+   <link rel="stylesheet" href="../css/generico.css">
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/forge/1.3.1/forge.min.js"
+      integrity="sha512-95iy0RZIbw3H/FgfAj2wnCQJlzFQ+eaSfUeV/l8WVyGHKSRMzm3M/O+85j9ba/HFphkijrCTDjcuDX0BL2lthA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.3.2/jsencrypt.min.js"
+      integrity="sha512-94ncgEEqkuZ4yNTFmu2dSn1TJ6Ij+ANQqpR7eLVU99kzvYzu6UjBxuVoNHtnd29R+T6nvK+ugCVI698pbyEkvQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script src="../js/generico.js"></script>
+   <script src="../js/autenticacao_usuario.js"></script>
+
+   <title>Autenticação Usuário</title>
+</head>
+
+<body>
+   <header id="cabecalho" class="container-fluid">
+   </header>
+
+   <main class="container-fluid">
+      <h3>
+         Autenticação Usuário
+         <hr>
+      </h3>
+
+      <form id="form_autenticacao_usuario">
+         <label>
+            Digite seu e-mail:
+            <input type="email" placeholder="E-mail" name="email" id="email" aria-invalid="" autofocus>
+            <small id="email_invalido" style="display: none;">
+               <i>E-mail inválido.</i>
+            </small>
+         </label>
+
+         <label>
+            Digite sua senha:
+            <input type="password" placeholder="Senha" name="senha" id="senha" aria-invalid="">
+            <small id="senha_invalida" style="display: none;">
+               <i>Senha inválida.</i>
+            </small>
+         </label>
+
+         <input type="button" onclick="validar_credenciais()" value="Autenticar">
+         <input type="reset" onclick="enviar_email_senha_nova()" value="Esqueci minha Senha">
+      </form>
+   </main>
+
+   <dialog id="modal">
+   </dialog>
+
+   <footer id="rodape" class="container-fluid">
+   </footer>
+</body>
+
+</html>

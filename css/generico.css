@@ -1,0 +1,88 @@
+@media (max-width: 425px) {
+   .mobile {
+      display: none;
+   }
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+
+   min-height: 100vh;
+}
+
+#cabecalho {
+   z-index: 1;
+
+   position: sticky;
+   top: 0;
+
+   padding-top: 0;
+   padding-bottom: 0;
+
+   backdrop-filter: blur(1rem);
+   background-color: var(--pico-modal-overlay-background-color);
+   border-bottom: var(--pico-border-width) solid var(--pico-secondary-focus);
+   box-shadow: var(--pico-card-box-shadow);
+}
+
+#logomarca {
+   display: flex;
+   align-items: center;
+
+   width: 6.5ch;
+}
+
+main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   flex: 1;
+}
+
+dialog {
+   text-align: center;
+}
+
+article {
+   text-align: center;
+   max-width: 767px;
+}
+
+details {
+   text-align: center;
+   max-width: 767px;
+}
+
+h3 {
+   text-align: center;
+   max-width: 767px;
+}
+
+hgroup {
+   text-align: center;
+   max-width: 767px;
+}
+
+div {
+   max-width: 767px;
+}
+
+*.table-parent {
+   width: inherit;
+   max-width: 767px;
+}
+
+td>input[type=range] {
+   vertical-align: middle;
+   margin-top: var(--pico-spacing);
+}
+
+a {
+   text-decoration: none;
+}
+
+#rodape {
+   text-align: center;
+}
